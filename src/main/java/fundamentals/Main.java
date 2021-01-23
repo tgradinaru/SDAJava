@@ -3,7 +3,7 @@ package fundamentals;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Write an application that will read diameter of a circle (variable of type float) and
         //calculate perimeter of given circle.
@@ -12,8 +12,6 @@ public class Main {
         System.out.println("Insert diameter: ");
         float diameter = scanner.nextFloat();
         float pi = (float) Math.PI;
-        System.out.println("The perimter has the folowing length: " + diameter*pi);
-
-
+        System.out.println("The perimeter has the folowing length: " + diameter * pi);
     }
 }
