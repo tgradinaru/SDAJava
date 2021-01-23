@@ -3,15 +3,24 @@ package fundamentals;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        // Write an application that will read diameter of a circle (variable of type float) and
-        //calculate perimeter of given circle.
-        //Firstly, assume π = 3.14. Later, use value of π from built-in Math class.
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Insert diameter: ");
-        float diameter = scanner.nextFloat();
-        float pi = (float) Math.PI;
-        System.out.println("The perimeter has the folowing length: " + diameter * pi);
+        //static vs non-static fields and methods
+        TasksExercises tasksExercises1 = new TasksExercises();
+        TasksExercises tasksExercises2 = new TasksExercises();
+        System.out.println("x1 = " + tasksExercises1.x);
+        System.out.println("x2 = " + tasksExercises2.x);
+        System.out.println("y1 = " + tasksExercises1.y);
+        System.out.println("y2 = " + tasksExercises2.y);
+        tasksExercises1.x = 22;
+        tasksExercises1.y = 3;
+        System.out.println("x1 = " + tasksExercises1.x);
+        System.out.println("x2 = " + tasksExercises2.x);
+        System.out.println("y1 = " + tasksExercises1.y);
+        System.out.println("y2 = " + tasksExercises2.y);
+
+        //Task 1
+        tasksExercises1.circlePerimeter();
     }
 }
