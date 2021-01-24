@@ -93,10 +93,11 @@ public class TasksExercises {
             fibo = temp1 + temp2;
             temp1 = temp2;
             temp2 = fibo;
-            System.out.print(fibo+" ");
+            System.out.print(fibo + " ");
         }
         System.out.println("\n" + "the number you are looking for in Fibonacci sequence is " + fibo);
     }
+
     //Write an application that gets one positive number (type int) from the user and calculates
     // a sum of digits of the given number.
     public static void digitsSum() {

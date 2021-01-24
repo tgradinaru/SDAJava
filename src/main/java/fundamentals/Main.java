@@ -30,7 +30,7 @@ public class Main {
         //TasksExercises.primeNumbers();
         //Task 5
         //TasksExercises.fibonacci();
-        //Task 6
+        //Task  6
         TasksExercises.digitsSum();
     }
 }
