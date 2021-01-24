@@ -95,6 +95,7 @@ public class TasksExercises {
             temp2 = fibo;
             System.out.print(fibo+" ");
         }
+        System.out.println("\n" + "the number you are looking for in Fibonacci sequence is " + fibo);
     }
 
 
