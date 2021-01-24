@@ -25,6 +25,8 @@ public class Main {
         //Task 2
         //TasksExercises.bodyMassIndex();
         //Task 3 fizzBuzz problem
-        TasksExercises.fizzBuzz();
+        //TasksExercises.fizzBuzz();
+        //Task 4
+        TasksExercises.primeNumbers();
     }
 }

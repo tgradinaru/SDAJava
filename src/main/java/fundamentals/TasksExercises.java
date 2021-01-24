@@ -49,9 +49,9 @@ public class TasksExercises {
         for (int i = 1; i <= fizzBuzz; i++) {
             if (((i % 3) == 0) && ((i % 7) == 0)) {
                 System.out.println("FizzBuzz");
-            } else if ((i % 3) == 0){
+            } else if ((i % 3) == 0) {
                 System.out.println("Fizz");
-            } else if ((i % 7) == 0){
+            } else if ((i % 7) == 0) {
                 System.out.println("Bizz");
             } else
                 System.out.println(i);
@@ -62,5 +62,22 @@ public class TasksExercises {
 
     //#2 Write an application that takes a positive number from the user (type int) and prints all
     // prime numbers greater than 1 and less than the given number.
+    public static void primeNumbers() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert an integer positive number: ");
+        int number = scanner.nextInt();
+        for (int i = 2; i < number; i++) {
+            int counter = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    counter++;
+                }
+            }
+            if (counter <= 2) {
+                System.out.println(i + " is a prime number");
+            }
+
+        }
+    }
 
 }
