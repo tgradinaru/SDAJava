@@ -23,6 +23,8 @@ public class Main {
         //Task 1
         //tasksExercises1.circlePerimeter();
         //Task 2
-        TasksExercises.bodyMassIndex();
+        //TasksExercises.bodyMassIndex();
+        //Task 3 fizzBuzz problem
+        TasksExercises.fizzBuzz();
     }
 }
