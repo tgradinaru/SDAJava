@@ -69,7 +69,7 @@ public class TasksExercises {
         for (int i = 2; i < number; i++) {
             int counter = 0;
 
-            for (int j = 2; j <= i/2; j++) {
+            for (int j = 2; j <= i / 2; j++) {
                 if (i % j == 0) {
                     counter++;
                 }
@@ -80,6 +80,22 @@ public class TasksExercises {
         }
     }
 
+    //Write an application that will take a positive number from the user (type int) and calculate
+    // the Fibonacci number at the indicated index. For example, if the number equals 5, your program
+    // should print the fifth Fibonacci number. In Fibonacci sequence,
+    // each number is the sum of the two preceding ones.
+    public static void fibonacci() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert an integer positive number: ");
+        int number = scanner.nextInt();
+        int temp1 = 0, temp2 = 1, fibo = 0;
+        for (int i = 1; i <= number; i++) {
+            fibo = temp1 + temp2;
+            temp1 = temp2;
+            temp2 = fibo;
+            System.out.print(fibo+" ");
+        }
+    }
 
 
 }

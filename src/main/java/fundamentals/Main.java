@@ -27,6 +27,8 @@ public class Main {
         //Task 3 fizzBuzz problem
         //TasksExercises.fizzBuzz();
         //Task 4
-        TasksExercises.primeNumbers();
+        //TasksExercises.primeNumbers();
+        //Task 5
+        TasksExercises.fibonacci();
     }
 }
