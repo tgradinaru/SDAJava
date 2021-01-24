@@ -29,6 +29,8 @@ public class Main {
         //Task 4
         //TasksExercises.primeNumbers();
         //Task 5
-        TasksExercises.fibonacci();
+        //TasksExercises.fibonacci();
+        //Task 6
+        TasksExercises.digitsSum();
     }
 }

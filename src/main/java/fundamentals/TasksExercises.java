@@ -97,6 +97,23 @@ public class TasksExercises {
         }
         System.out.println("\n" + "the number you are looking for in Fibonacci sequence is " + fibo);
     }
+    //Write an application that gets one positive number (type int) from the user and calculates
+    // a sum of digits of the given number.
+    public static void digitsSum() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert an integer positive number: ");
+        int a = scanner.nextInt();
+        int b, sum, temp;
+        b = a;
+        sum = 0;
+        do {
+            temp = a % 10;
+            sum = sum + temp;
+            a = a / 10;
+        }
+        while (a > 0);
+        System.out.println("sum of digits of the given number " + b + " = " + sum);
+    }
 
 
 }
