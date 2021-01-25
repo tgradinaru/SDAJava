@@ -31,6 +31,8 @@ public class Main {
         //Task 5
         //TasksExercises.fibonacci();
         //Task  6
-        TasksExercises.digitsSum();
+        //TasksExercises.digitsSum();
+        //Task 7
+        TasksExercises.enoughString();
     }
 }

@@ -116,5 +116,47 @@ public class TasksExercises {
         System.out.println("sum of digits of the given number " + b + " = " + sum);
     }
 
+    //Write an application that will read texts (variables of the String type) until the user
+    // gives the text "Enough!" and then writes the longest of the given texts (not including the text "Enough!").
+    // If the user does not provide any text, write "No text provided".
+    public static void enoughString() {
+        Scanner scanner = new Scanner(System.in);
+        String currentWord = "";
+        String endText = "Enough!";
+        //String stringArray[] = {};
+        //definesc stringArray-ul - altfel eroare "Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0"
+        String stringArray[] = {"", "", "", "", "", "", "", "", "", ""};
+        int countCharArray[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int counter = 0;
+        int maxLength = 0;
+        do {
+            System.out.println("Insert a new text ");
+            currentWord = scanner.nextLine();
+            stringArray[counter] = currentWord;
+            countCharArray[counter] = currentWord.length();
+            counter++;
+        } while (currentWord.compareTo(endText) != 0);
+        stringArray[counter - 1] = "";
+        countCharArray[counter - 1] = 0;
+        for (int i = 0; i < counter; i++) {
+            if (maxLength <= stringArray[i].length()) {
+                maxLength = stringArray[i].length();
+            } else {
+                continue;
+            }
+        }
+        System.out.println("Inputed texts");
+        for (int i = 0; i <= counter; i++) {
+            System.out.print(stringArray[i] + " ");
+        }
+        if (maxLength>0){
+            System.out.println("\nCuvantul(ele) cel(e) mai lung(i) este/sunt: ");
+        }
+        for (int i = 0; i < counter; i++) {
+            if (countCharArray[i] == maxLength) {
+                System.out.print(stringArray[i] + " ");
+            }
+        }
+    }
 
 }
