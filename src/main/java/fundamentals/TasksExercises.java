@@ -165,14 +165,33 @@ public class TasksExercises {
         System.out.println("Insert some text");
         Scanner scanner = new Scanner(System.in);
         String currentLine = scanner.nextLine();
-        char space = ' ';
         int counter = 0;
         for (int i = 0; i < currentLine.length(); i++) {
-            if (currentLine.charAt(i) == space) {
+            if (currentLine.charAt(i) == ' ') {
                 counter++;
             } else continue;
         }
         System.out.println("The percentage of occurences of space character is "
-                + ((float) counter * 100 / (float) currentLine.length()) +"%");
+                + ((float) counter * 100 / (float) currentLine.length()) + "%");
     }
+
+    //Write an application that "stutters", that is, reads the user's text (type String),
+    // and prints the given text, in which each word is printed twice. For example,
+    // for the input: "This is my test" the application should print "This This is is my my test test".
+    public static void stutteredText() {
+        System.out.println("Insert some text");
+        Scanner scanner = new Scanner(System.in);
+        String currentLine = scanner.nextLine();
+        String temp = "";
+        for (int i = 0; i < currentLine.length(); i++) {
+            if (currentLine.charAt(i) == ' ') {
+                System.out.print(temp + " " + temp + " ");
+                temp = "";
+            } else {
+                temp = temp + currentLine.charAt(i);
+            }
+        }
+        System.out.println(temp + " " + temp);
+    }
+//--------------------------
 }

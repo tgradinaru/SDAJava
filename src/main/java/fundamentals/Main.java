@@ -35,6 +35,8 @@ public class Main {
         //Task 7
         //TasksExercises.enoughString();
         //Task 8
-        TasksExercises.spaceOccurrences();
+        //TasksExercises.spaceOccurrences();
+        //Task 9
+        TasksExercises.stutteredText();
     }
 }
