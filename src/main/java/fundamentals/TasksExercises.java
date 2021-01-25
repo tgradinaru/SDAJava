@@ -213,11 +213,11 @@ public class TasksExercises {
         System.out.println("Input another character between a .. and .. z");
         String secondChar = scanner.next();
         int j = secondChar.toLowerCase().charAt(0);
-        do{
+        do {
             System.out.println("Input one SINGLE character between a .. and .. z");
             secondChar = scanner.next();
             i = secondChar.toLowerCase().charAt(0);
-        } while  ((secondChar.length() > 1) || (i < 97) || (i > 122));
+        } while ((secondChar.length() > 1) || (i < 97) || (i > 122));
 
         i = firstChar.toLowerCase().charAt(0);
         j = secondChar.toLowerCase().charAt(0);
@@ -226,6 +226,40 @@ public class TasksExercises {
         } else {
             System.out.println("There are " + (Math.abs(i - j) - 1) + " characters between " +
                     firstChar.toLowerCase().charAt(0) + " and " + secondChar.toLowerCase().charAt(0));
+        }
+    }
+
+    // Write an application that reads from the user 10 arbitrarily large numbers
+    // (variables of type int) and prints those that occurred at least twice.
+    public static void largeNumbersCompare() {
+        System.out.println("Input integer numbers between numbers from -2,147,483,648 to 2,147,483,647");
+        Scanner scanner = new Scanner(System.in);
+        int[] intsArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int k = 1;
+        do {
+            System.out.print("No #" + k + ":");
+            intsArray[k-1] = scanner.nextInt();
+            k++;
+        } while (k <= 10);
+
+        int[] occurencesArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int counter = 0;
+        for (int i = 0; i < 10; i++) {
+            for (int j = i + 1; j < 10; j++) {
+                if (intsArray[i] == intsArray[j]) {
+                    occurencesArray[i]++;
+                    occurencesArray[j] -= 10;
+                    counter++;
+                } else continue;
+            }
+        }
+        if (counter == 0) {
+            System.out.println("There aren't repeating numbers");
+        }
+        for (int i = 0; i < 10; i++) {
+            if (occurencesArray[i] > 0) {
+                System.out.println(intsArray[i] + " has " + (occurencesArray[i] + 1) + " occurrences");
+            }
         }
     }
 //--------------------------
