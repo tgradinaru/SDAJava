@@ -149,8 +149,8 @@ public class TasksExercises {
         for (int i = 0; i <= counter; i++) {
             System.out.print(stringArray[i] + " ");
         }
-        if (maxLength>0){
-            System.out.println("\nCuvantul(ele) cel(e) mai lung(i) este/sunt: ");
+        if (maxLength > 0) {
+            System.out.println("\nThe longest word/words is/are: ");
         }
         for (int i = 0; i < counter; i++) {
             if (countCharArray[i] == maxLength) {
@@ -159,4 +159,20 @@ public class TasksExercises {
         }
     }
 
+    //Write an application that reads a text from the user (type String)
+    // and counts a percentage of occurrences of a space character.
+    public static void spaceOccurrences() {
+        System.out.println("Insert some text");
+        Scanner scanner = new Scanner(System.in);
+        String currentLine = scanner.nextLine();
+        char space = ' ';
+        int counter = 0;
+        for (int i = 0; i < currentLine.length(); i++) {
+            if (currentLine.charAt(i) == space) {
+                counter++;
+            } else continue;
+        }
+        System.out.println("The percentage of occurences of space character is "
+                + ((float) counter * 100 / (float) currentLine.length()) +"%");
+    }
 }

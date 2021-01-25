@@ -33,6 +33,8 @@ public class Main {
         //Task  6
         //TasksExercises.digitsSum();
         //Task 7
-        TasksExercises.enoughString();
+        //TasksExercises.enoughString();
+        //Task 8
+        TasksExercises.spaceOccurrences();
     }
 }
