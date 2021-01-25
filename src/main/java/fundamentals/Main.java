@@ -37,6 +37,8 @@ public class Main {
         //Task 8
         //TasksExercises.spaceOccurrences();
         //Task 9
-        TasksExercises.stutteredText();
+        //TasksExercises.stutteredText();
+        //Task 10
+        TasksExercises.charsNumberBetween2letters();
     }
 }

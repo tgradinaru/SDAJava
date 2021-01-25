@@ -1,5 +1,6 @@
 package fundamentals;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class TasksExercises {
@@ -192,6 +193,40 @@ public class TasksExercises {
             }
         }
         System.out.println(temp + " " + temp);
+    }
+
+    // Write an application that reads two lowercase letters of the Latin alphabet (type char) and calculates
+    // how many characters is there in the alphabet between given letters. Hint - use the ASCII code table and
+    // treat the characters as int numbers.
+    public static void charsNumberBetween2letters() {
+        System.out.println("Input one character between a .. and .. z");
+        Scanner scanner = new Scanner(System.in);
+
+        String firstChar = scanner.next();
+        int i = firstChar.toLowerCase().charAt(0);
+        do {
+            System.out.println("Input one SINGLE character between a .. and .. z");
+            firstChar = scanner.next();
+            i = firstChar.toLowerCase().charAt(0);
+        } while ((firstChar.length() > 1) || (i < 97) || (i > 122));
+
+        System.out.println("Input another character between a .. and .. z");
+        String secondChar = scanner.next();
+        int j = secondChar.toLowerCase().charAt(0);
+        do{
+            System.out.println("Input one SINGLE character between a .. and .. z");
+            secondChar = scanner.next();
+            i = secondChar.toLowerCase().charAt(0);
+        } while  ((secondChar.length() > 1) || (i < 97) || (i > 122));
+
+        i = firstChar.toLowerCase().charAt(0);
+        j = secondChar.toLowerCase().charAt(0);
+        if (i == j) {
+            System.out.println("The same character twice :) - there are 0 characters between");
+        } else {
+            System.out.println("There are " + (Math.abs(i - j) - 1) + " characters between " +
+                    firstChar.toLowerCase().charAt(0) + " and " + secondChar.toLowerCase().charAt(0));
+        }
     }
 //--------------------------
 }
