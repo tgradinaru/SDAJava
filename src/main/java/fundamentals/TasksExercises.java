@@ -1,6 +1,9 @@
 package fundamentals;
 
-import java.util.Locale;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class TasksExercises {
@@ -289,7 +292,24 @@ public class TasksExercises {
                 k = 1;
             }
         }
-        System.out.println("The longest increasing subsequnce has " + longestSubsequence + " numbers");
+        System.out.println("The longest increasing subsequence has " + longestSubsequence + " numbers");
+    }
+
+    // Write an application that will read from the user the date of your next SDA classes and calculate
+    // how many days are left to them. Hint: read the date as String and parse it to LocalDate.
+    // Get the current date using LocalDate.now() method.
+    public static void remainingDays() throws ParseException {
+        System.out.println("Insert the date of your next SDA classes in the next format dd/MM/yyyy ");
+        Scanner scanner = new Scanner(System.in);
+        String inputDate = scanner.next();
+
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate classDate = LocalDate.parse(inputDate, dateFormat);
+        LocalDate todayDate = LocalDate.now();
+
+        Period period = Period.between(todayDate, classDate);
+        System.out.println(period.getDays() + " days until SDA Java classes");
+
     }
 //--------------------------
 }
