@@ -18,7 +18,7 @@ public class TasksExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert diameter: ");
         float diameter = scanner.nextFloat();
-        System.out.println("The perimeter has the folowing length: " + diameter * pi);
+        System.out.println("The perimeter has the following length: " + diameter * pi);
     }
 
     //Write an application calculating BMI (Body Mass Index) and checking if itЀs optimal or not.
@@ -56,7 +56,7 @@ public class TasksExercises {
             } else if ((i % 3) == 0) {
                 System.out.println("Fizz");
             } else if ((i % 7) == 0) {
-                System.out.println("Bizz");
+                System.out.println("Buzz");
             } else
                 System.out.println(i);
         }
@@ -149,7 +149,7 @@ public class TasksExercises {
                 continue;
             }
         }
-        System.out.println("Inputed texts");
+        System.out.println("Inputted texts");
         for (int i = 0; i <= counter; i++) {
             System.out.print(stringArray[i] + " ");
         }
@@ -175,7 +175,7 @@ public class TasksExercises {
                 counter++;
             } else continue;
         }
-        System.out.println("The percentage of occurences of space character is "
+        System.out.println("The percentage of occurrences of space character is "
                 + ((float) counter * 100 / (float) currentLine.length()) + "%");
     }
 
@@ -245,13 +245,13 @@ public class TasksExercises {
             k++;
         } while (k <= 10);
 
-        int[] occurencesArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int[] occurrencesArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         int counter = 0;
         for (int i = 0; i < 10; i++) {
             for (int j = i + 1; j < 10; j++) {
                 if (intsArray[i] == intsArray[j]) {
-                    occurencesArray[i]++;
-                    occurencesArray[j] -= 10;
+                    occurrencesArray[i]++;
+                    occurrencesArray[j] -= 10;
                     counter++;
                 } else continue;
             }
@@ -260,8 +260,8 @@ public class TasksExercises {
             System.out.println("There aren't repeating numbers");
         }
         for (int i = 0; i < 10; i++) {
-            if (occurencesArray[i] > 0) {
-                System.out.println(intsArray[i] + " has " + (occurencesArray[i] + 1) + " occurrences");
+            if (occurrencesArray[i] > 0) {
+                System.out.println(intsArray[i] + " has " + (occurrencesArray[i] + 1) + " occurrences");
             }
         }
     }
@@ -309,7 +309,7 @@ public class TasksExercises {
 
         Period period = Period.between(todayDate, classDate);
         System.out.println(period.getDays() + " days until SDA Java classes");
-
     }
 //--------------------------
-}
+}// END OF TASKS EXERCISES Class
+
