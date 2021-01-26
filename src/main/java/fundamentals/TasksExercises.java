@@ -232,13 +232,13 @@ public class TasksExercises {
     // Write an application that reads from the user 10 arbitrarily large numbers
     // (variables of type int) and prints those that occurred at least twice.
     public static void largeNumbersCompare() {
-        System.out.println("Input integer numbers between numbers from -2,147,483,648 to 2,147,483,647");
+        System.out.println("Input 10 integer numbers between numbers from -2,147,483,648 to 2,147,483,647");
         Scanner scanner = new Scanner(System.in);
         int[] intsArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         int k = 1;
         do {
             System.out.print("No #" + k + ":");
-            intsArray[k-1] = scanner.nextInt();
+            intsArray[k - 1] = scanner.nextInt();
             k++;
         } while (k <= 10);
 
@@ -261,6 +261,35 @@ public class TasksExercises {
                 System.out.println(intsArray[i] + " has " + (occurencesArray[i] + 1) + " occurrences");
             }
         }
+    }
+
+    //Write an application that takes 10 numbers from the user (type int) and write the length
+    // of the longest such subsequence of these numbers, which is increasing.
+    // For example, for the numbers: "1, 3, 8, 4, 2, 5, 6, 11, 13, 7" the program should write "5" as the length
+    // of the longest increasing subsequence (underlined in the example).
+    public static void longestIncreasingSubsequence() {
+        System.out.println("Input 10 integer numbers between numbers from -2,147,483,648 to 2,147,483,647");
+        Scanner scanner = new Scanner(System.in);
+        int[] intsArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int k = 1;
+        do {
+            System.out.print("No #" + k + ":");
+            intsArray[k - 1] = scanner.nextInt();
+            k++;
+        } while (k <= 10);
+        k = 1;
+        int longestSubsequence = 0;
+        for (int i = 1; i < 9; i++) {
+            if (intsArray[i] > intsArray[i - 1]) {
+                k++;
+                if (k > longestSubsequence) {
+                    longestSubsequence = k;
+                } else continue;
+            } else {
+                k = 1;
+            }
+        }
+        System.out.println("The longest increasing subsequnce has " + longestSubsequence + " numbers");
     }
 //--------------------------
 }

@@ -41,6 +41,8 @@ public class Main {
         //Task 10
         //TasksExercises.charsNumberBetween2letters();
         //Task 11
-        TasksExercises.largeNumbersCompare();
+        //TasksExercises.largeNumbersCompare();
+        //Task 12
+        TasksExercises.longestIncreasingSubsequence();
     }
 }
