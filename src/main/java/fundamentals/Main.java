@@ -23,18 +23,24 @@ public class Main {
         /*Task 2*/       //TasksExercises.bodyMassIndex();
         /*Task 3*/       //TasksExercises.fizzBuzz();
         /*Task 4*/       //TasksExercises.primeNumbers();
+        //TasksExercises.printAllPrimeNumbers();
         /*Task 5*/       //TasksExercises.fibonacci();
         /*Task 6*/       //TasksExercises.digitsSum();
         /*Task 7*/       //TasksExercises.enoughString();
+                //TasksExercises.longestWord1();
         /*Task 8*/       //TasksExercises.spaceOccurrences();
         /*Task 9*/       //TasksExercises.stutteredText();
+        //TasksExercises.stutteredText1();
+        //TasksExercises.textString();
+        TasksExercises.testObject();
+
         /*Task 10*/      //TasksExercises.charsNumberBetween2letters();
         /*Task 11*/      //TasksExercises.largeNumbersCompare();
         /*Task 12*/      //TasksExercises.longestIncreasingSubsequence();
         /*Task 13*/      //TasksExercises.remainingDays();
 
         /*Task 14*/
-        Author autor1 = new Author();
+       /* Author autor1 = new Author();
         Author autor2 = new Author();
         Author autor3 = new Author();
         autor1.surname = "Adrian";
@@ -60,6 +66,7 @@ public class Main {
                 counter = i;
             } else continue;
         }
-        System.out.println("The author of the longest poem is \n" + poemsArray[counter].creator.surname);
+        System.out.println("The author of the longest poem is \n" + poemsArray[counter].creator.surname);*/
     }
+
 }
