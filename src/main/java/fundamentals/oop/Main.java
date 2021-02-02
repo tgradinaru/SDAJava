@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Type account: " + bankAccount.getAccountType());
         System.out.println("Currency: " + bankAccount.getCurrency());
         //case 1: give bank account to the client from outside (created outside)
-        Client client1 = new Client("Larisa", "111111111", bankAccount);
+        Client client1 = new Client("John Doe", "111111111", bankAccount);
         System.out.println(client1.tostring());
 
         client1.getBankAccount().addMoney(12);
@@ -29,7 +29,7 @@ public class Main {
         client1.setBankAccounts(myArray);
         System.out.println(myArray[0]);
 
-        System.out.println(client1.getBankAccounts()[0] + "Prima varianta - eficienta");   //citesc prima pozitie din arrayul de bankaccounts
+        System.out.println(client1.getBankAccounts()[0] + " Prima varianta - eficienta");   //citesc prima pozitie din arrayul de bankaccounts
 
         BankAccount[] clientBankAccounts = client1.getBankAccounts();
         System.out.println(clientBankAccounts[0] + " A doua varianta - mai putin eficienta");

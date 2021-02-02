@@ -46,15 +46,18 @@ public class BankAccount {   /// ALT+Insert construieste automat Setter si Gette
     //to be bigger than 10% of balance otherwise print a suggestive  error message)
     public void addMoney(double newMoney) {
         if (this.accountType == "SPENDING" && newMoney <= this.balance / 10) {
-            System.out.println("Please add at least 10% of actual balance");
+            System.out.println("Please add at least 10% of actual balance, more than " + this.balance / 10 + " "
+                    + this.currency);
             return;
         }
         this.balance += newMoney;
-        System.out.println("Your new balance is: " + this.balance);
+        System.out.println("Your new balance is: " + this.balance + " " + this.currency);
     }
 
-    //withdrawMoney ( withdraws  money from the balance - if the account is of type SAVING the remaining balance can not
-// * be < 0 otherwise print a suggestive  error message )
+    /**
+     * withdrawMoney ( withdraws  money from the balance - if the account is of type SAVING the remaining balance
+     * can not be < 0 otherwise print a suggestive  error message )
+     */
     public void withdrawMoney(double newMoney) {
         if (this.accountType == "SAVING" && this.balance - newMoney < 0) {
             System.out.println("Your balance can't be negative!");
@@ -63,14 +66,21 @@ public class BankAccount {   /// ALT+Insert construieste automat Setter si Gette
         this.balance -= newMoney;
         System.out.println("Your new balance is: " + this.balance);
     }
-    // * covertMoneyToCurrency ( that takes 2 arrguments: amountOfMoney to convert, and the currency to convert
-    // to and returns the result = the money in the input currency)
-    public static double convertMoneyToCurrency(double amountOfMoney, String inputCurrency, String outputCurrency){
-        if(inputCurrency.equals("EUR") && outputCurrency.equals("USD")){
+
+    /**
+     * convertMoneyToCurrency ( that takes 2 arrguments: amountOfMoney to convert, and the currency to convert
+     * to and returns the result = the money in the input currency)
+     */
+    public static double convertMoneyToCurrency(double amountOfMoney, String inputCurrency, String outputCurrency) {
+        if (inputCurrency.equals("EUR") && outputCurrency.equals("USD")) {
             return amountOfMoney * EUR_TO_USD;
         }
         return amountOfMoney * USD_TO_EUR;
     }
+
+    /**
+     * @return
+     */
 
     @Override
     public String toString() {

@@ -36,7 +36,7 @@ public class TasksExercises {
         float weight = scanner.nextFloat();
         float bmi = weight / ((float) height * (float) height / 10000);
 
-        if ((bmi >= 18.5f) && (bmi <= 24.9)) {
+        if ((bmi >= 18.5) && (bmi <= 24.9)) {
             System.out.println(bmi + " BMI optimal");
         } else
             System.out.println(bmi + " BMI not optimal");
