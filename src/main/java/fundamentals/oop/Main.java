@@ -1,10 +1,11 @@
 package fundamentals.oop;
 
+import fundamentals.Arrays_and_Strings;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         BankAccount bankAccount = new BankAccount();
         System.out.println("Type account: " + bankAccount.getAccountType());
         System.out.println("Currency: " + bankAccount.getCurrency());
@@ -33,7 +34,7 @@ public class Main {
 
         BankAccount[] clientBankAccounts = client1.getBankAccounts();
         System.out.println(clientBankAccounts[0] + " A doua varianta - mai putin eficienta");
-        System.out.println(client1);
+        System.out.println(client1);*/
 
 /*        System.out.println("input client's name: ");
         String name = scanner.next();
@@ -42,6 +43,18 @@ public class Main {
         //case 2: clinet has asigned by default a default bank account - crete the bank account inside th constructor
         Client client2 = new Client(name,cnp);
         System.out.println(client2.tostring());*/
+
+        //Arrays_and_Strings.maxProductFromIntArray();
+        //Arrays_and_Strings.specificValueInAStringArray();
+        //Arrays_and_Strings.removeASpecificElementFromArray();
+        //Arrays_and_Strings.theSecondMaxnumberFromIntArray();
+        //Arrays_and_Strings.findDuplicatesInStringArray();
+
+        //StringExercises.charAtIndexInString();
+        //StringExercises.stringInString();
+        //StringExercises.replaceACharacterInString();
+        //StringExercises.firstLetterUpperCase(); // nerezelvata
+        //StringExercises.compareTwoStringsWithoutCase("Abcd", "abCd");
 
     }
 }
