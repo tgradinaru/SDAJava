@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 import testing.fundamentals.ArrayStringExercises;
 
 import static org.junit.jupiter.api.Assertions.*;
-//import static org.assertj.core.api.Assertions.assertThat;
-// import testing.fundamentals.ArrayStringExercises;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ArrayStringExercisesTest {
 
@@ -23,20 +22,6 @@ public class ArrayStringExercisesTest {
         assertEquals(expectedResult, actualResult);
     }
 
-    /*    @Test
-        void shouldAppendLength() { // DE RESCRIS
-            //Given
-            String inputText = "TextTestXX";
-            String expectedResult = "TextTestXX10";
-            ArrayStringExercises arrayEx = new ArrayStringExercises();
-            //When
-            String actualResult = arrayEx.appendLength(inputText);
-            //Then
-            //assertEquals(expectedResult, actualResult);
-
-            //assertThat(actualResult).endsWith("10");
-        }*/
-
     @Test
     void shouldAppendLength() {
 //        Given
@@ -47,7 +32,7 @@ public class ArrayStringExercisesTest {
         String actualResult = arrayEX.appendLength(text);
 //        Then
         assertEquals(expectedResult, actualResult);
-        //assertThat(actualResult).endsWith("10");
+        assertThat(actualResult).endsWith("10");
     }
 
     @Test
