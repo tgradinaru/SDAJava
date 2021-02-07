@@ -44,7 +44,7 @@ public class Product {
         System.out.println("Successfully set up the new price " + price);
     }
 
-    public void setBestBeforePriceVar(Date today) {
+/*    public void setBestBeforePriceVar(Date today) {
         today.getTime();
         long todayInMilliSec;
         long bestBeforeInMilliSec;
@@ -54,7 +54,7 @@ public class Product {
         if (bestBeforeInMilliSec - TIME_TO_BEST_BEFORE <= todayInMilliSec) {
             this.sellingPrice -= this.sellingPrice * BEST_BEFORE_PRICE_VAR;
         }
-    }
+    }*/
 
     public String toString() {
         return "Product{" +

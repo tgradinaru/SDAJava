@@ -31,8 +31,8 @@ public class Main {
         /*Task 8*/       //TasksExercises.spaceOccurrences();
         /*Task 9*/       //TasksExercises.stutteredText();
         //TasksExercises.stutteredText1();
-        //TasksExercises.textString();
-        TasksExercises.testObject();
+        TasksExercises.textString();
+        //TasksExercises.testObject();
 
         /*Task 10*/      //TasksExercises.charsNumberBetween2letters();
         /*Task 11*/      //TasksExercises.largeNumbersCompare();
