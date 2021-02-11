@@ -40,7 +40,7 @@ public class Main {
         String name = scanner.next();
         System.out.println("input client's cnp: ");
         String cnp = scanner.next();
-        //case 2: clinet has asigned by default a default bank account - crete the bank account inside th constructor
+        //case 2: clinet has asigned by default a default bank account - create the bank account inside th constructor
         Client client2 = new Client(name,cnp);
         System.out.println(client2.tostring());*/
 
